@@ -2,7 +2,6 @@ import { useState } from 'react';
 import Icon from '@/components/ui/icon';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 
 interface HeaderProps {
   cartItemsCount: number;
@@ -68,35 +67,11 @@ export default function Header({ cartItemsCount, onCartOpen, onSearch }: HeaderP
                 </span>
               )}
             </Button>
-
-            <Sheet>
-              <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" className="md:hidden">
-                  <Icon name="Menu" size={20} />
-                </Button>
-              </SheetTrigger>
-              <SheetContent>
-                <div className="flex flex-col gap-4 mt-8">
-                  <Button variant="outline" className="w-full justify-start">
-                    <Icon name="Home" size={18} className="mr-2" />
-                    Главная
-                  </Button>
-                  <Button variant="outline" className="w-full justify-start">
-                    <Icon name="Heart" size={18} className="mr-2" />
-                    Избранное
-                  </Button>
-                  <Button variant="outline" className="w-full justify-start">
-                    <Icon name="User" size={18} className="mr-2" />
-                    Профиль
-                  </Button>
-                </div>
-              </SheetContent>
-            </Sheet>
           </div>
         </div>
 
         {isSearchOpen && (
-          <form onSubmit={handleSearch} className="mt-3 md:hidden">
+          <form onSubmit={handleSearch} className="mt-3 md:hidden animate-fade-in">
             <div className="relative">
               <Input
                 type="text"
