@@ -24,9 +24,9 @@ export default function Header({ cartItemsCount, onCartOpen, onSearch }: HeaderP
         <div className="flex items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             <img 
-              src="https://cdn.poehali.dev/files/logo2.jpg" 
+              src="https://cdn.poehali.dev/files/logo.jpg" 
               alt="Sakura Flowers" 
-              className="h-10 md:h-12"
+              className="h-12 md:h-14 rounded-full"
             />
           </div>
 

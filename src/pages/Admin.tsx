@@ -96,9 +96,9 @@ export default function Admin() {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               <img 
-                src="https://cdn.poehali.dev/files/logo2.jpg" 
+                src="https://cdn.poehali.dev/files/logo.jpg" 
                 alt="Sakura Flowers" 
-                className="h-10"
+                className="h-12 rounded-full"
               />
               <h1 className="text-xl md:text-2xl font-bold">Админ-панель</h1>
             </div>

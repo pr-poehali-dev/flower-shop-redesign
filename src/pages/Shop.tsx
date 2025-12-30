@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import Header from '@/components/Header';
-import HeroSlider from '@/components/HeroSlider';
 import Categories, { Category } from '@/components/Categories';
 import ProductCard, { Product } from '@/components/ProductCard';
+import ProductSlider from '@/components/ProductSlider';
 import Cart from '@/components/Cart';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
@@ -79,8 +79,6 @@ export default function Shop() {
         onSearch={setSearchQuery}
       />
       
-      <HeroSlider />
-
       <section className="container mx-auto px-4 py-16">
         <div className="text-center max-w-3xl mx-auto mb-12 animate-fade-in">
           <h2 className="text-3xl md:text-5xl font-bold mb-6 text-foreground">
@@ -131,9 +129,9 @@ export default function Shop() {
           <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
             <div className="flex-1 animate-fade-in">
               <img 
-                src="https://cdn.poehali.dev/files/logo.jpg" 
+                src="https://cdn.poehali.dev/files/logo2.jpg" 
                 alt="Sakura Logo" 
-                className="w-full max-w-md mx-auto rounded-2xl shadow-xl"
+                className="w-full max-w-md mx-auto"
               />
             </div>
             <div className="flex-1 animate-fade-in" style={{ animationDelay: '0.2s' }}>
@@ -163,24 +161,11 @@ export default function Shop() {
       <div className="container mx-auto px-4 py-12">
         {searchQuery === '' && (
           <section className="mb-16">
-            <div className="flex items-center justify-between mb-8">
-              <h3 className="text-2xl md:text-4xl font-bold text-foreground">
-                Популярные букеты
-              </h3>
-              <Button variant="ghost" className="text-primary hover:text-primary/80">
-                Все
-                <Icon name="ArrowRight" size={16} className="ml-1" />
-              </Button>
-            </div>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-              {popularProducts.map((product) => (
-                <ProductCard
-                  key={product.id}
-                  product={product}
-                  onAddToCart={handleAddToCart}
-                />
-              ))}
-            </div>
+            <ProductSlider
+              products={popularProducts}
+              title="Популярные букеты"
+              onAddToCart={handleAddToCart}
+            />
           </section>
         )}
 
@@ -217,9 +202,9 @@ export default function Shop() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
               <img 
-                src="https://cdn.poehali.dev/files/logo2.jpg" 
+                src="https://cdn.poehali.dev/files/logo.jpg" 
                 alt="Sakura Flowers" 
-                className="h-12 mb-4"
+                className="h-16 rounded-full mb-4"
               />
               <p className="text-muted-foreground text-sm">
                 Цветочный магазин с душой. <br />
