@@ -22,9 +22,12 @@ export default function Header({ cartItemsCount, onCartOpen, onSearch }: HeaderP
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between gap-4">
-          <div className="flex items-center gap-2">
-            <span className="text-2xl">🌸</span>
-            <h1 className="text-xl md:text-2xl font-bold text-foreground">FlowerShop</h1>
+          <div className="flex items-center gap-3">
+            <img 
+              src="https://cdn.poehali.dev/files/logo2.jpg" 
+              alt="Sakura Flowers" 
+              className="h-10 md:h-12"
+            />
           </div>
 
           <div className="flex-1 max-w-md hidden md:block">

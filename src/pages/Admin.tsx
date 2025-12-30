@@ -95,7 +95,11 @@ export default function Admin() {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <Icon name="Settings" size={24} className="text-primary" />
+              <img 
+                src="https://cdn.poehali.dev/files/logo2.jpg" 
+                alt="Sakura Flowers" 
+                className="h-10"
+              />
               <h1 className="text-xl md:text-2xl font-bold">Админ-панель</h1>
             </div>
             <Button
